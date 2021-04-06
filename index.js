@@ -7,7 +7,7 @@ require("dotenv").config()
 const app = express()
 app.use(bodyParser.json())
 app.use(cors())
-app.listen(5000, () => console.log("Port 5000 is running"))
+app.listen(process.env.PORT || 5000, () => console.log("Port 5000 is running"))
 
 //* MongoDB 
 const MongoClient = require('mongodb').MongoClient;
